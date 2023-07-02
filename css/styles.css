@@ -1,0 +1,10 @@
+* {
+    border: orange solid 1px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-auto-rows: 250px;
+    grid-gap: 22px;
+}
