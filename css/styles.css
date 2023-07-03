@@ -26,31 +26,31 @@ body {
     text-align: center;
 }
 
-.grid-item-1 {
+.header {
     grid-area: header;
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
 }
 
-.grid-item-2 {
+.resources {
     grid-area: resource;
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
 }
 
-.grid-item-3 {
+.form-entry {
     grid-area: form;
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
 }
 
-.grid-item-4 {
+.error-space {
     grid-area: error;
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
 }
 
-.grid-item-5 {
+.footer {
     grid-area: footer;
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
