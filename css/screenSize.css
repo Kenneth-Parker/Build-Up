@@ -1,0 +1,29 @@
+@media screen and (max-width: 540px) {
+    body {
+        background-color: blue;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 5fr 4fr 2fr 1fr;
+        grid-template-areas:
+            "header"
+            "resource"
+            "form"
+            "error"
+            "footer";
+
+    }
+
+    /* .grid-item-2 {
+        grid-column: 1;
+    }
+    
+    .grid-item-3 {
+        grid-column: 1;
+    }
+
+    .grid-item-4 {
+        grid-column: 1;
+    } */
+}
