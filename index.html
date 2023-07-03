@@ -15,7 +15,33 @@
     <div class="grid-container">
         <div class="header"><h1>Header</h1></div>
         <div class="resources"><h2>Resources</h2></div>
-        <div class="form-entry">Form Entry</div>
+        <div class="form-entry">Form Entry
+            <hr>
+            <div class="form">
+                <form action="">
+                    <label class="label" for="brand">Brand Name</label><br>
+                    <input class="input" type="text" id="brand" name="brand" placeholder="Ex: Jansport" value=""><br>
+                    <br>
+                    <label class="label" for="name">Item Name</label><br>
+                    <input class="input" type="text" id="name" name="name" placeholder="Ex: commuter" value=""><br>
+                    <br>
+                    <label class="label" for="price">Price</label><br>
+                    <input class="input" type="number" min="0.00" step="0.01" id="price" name="price" placeholder="Ex: 17.99" value=""><br>
+                    <br>
+                    <label class="label" for="image">Image File</label><br>
+                    <input class="input" type="file" id="image" name="image" placeholder="jpg. gif. png." value=""><br>
+                    <br>
+                    <label class="label" for="stock">In Stock</label><br>
+                    <select name="stock" id="stock">
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                      </select>
+                      <br><br>
+                    <input type="submit" value="Submit">
+                    <input type="reset" value="Reset" style="margin-left: 11px;">
+                  </form>
+            </div>
+        </div>
         <div class="error-space">Error Space</div>
         <div class="footer"><h3>Footer</h3></div>
     </div>

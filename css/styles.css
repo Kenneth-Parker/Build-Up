@@ -1,5 +1,5 @@
 * {
-    border: orange solid 1px;
+    /* border: orange solid 1px; */
 }
 
 :root {
@@ -10,10 +10,18 @@
 body {
     margin: 0;
     padding: 11px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* height: 100vh; */
+    /* display: grid; */
+    justify-content: center;
+    align-items: center;
+    /* font-size: 1.2rem; */
+    background-color: rgb(149, 149, 149);
 }
 
 .grid-container {
     display: grid;
+    background-color: #3f163f87;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 5fr 4fr 3fr 1fr;
     grid-gap: 22px;
@@ -42,10 +50,38 @@ body {
     grid-area: form;
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
+
+    .form {
+        padding-top: 22px;
+    }
+
+    .input {
+        color: chartreuse;
+    }
+
+    input[type="number"] {
+        text-align: right;
+        margin-right: 10px;
+        /* Add currency marker */
+        &::after {
+          content: "$";
+          margin-left: 5px;
+        }
+      }
+
+    .label {
+        padding-bottom: 111px;
+    }
 }
+
+#image.input {
+    margin-left: 88px;
+}  
+
 
 .error-space {
     grid-area: error;
+    display: none;
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
 }
