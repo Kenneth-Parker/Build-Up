@@ -57,6 +57,8 @@ body {
 
     .input {
         color: chartreuse;
+        width: 80%;
+        height: 33px;
     }
 
     input[type="number"] {
@@ -75,7 +77,7 @@ body {
 }
 
 #image.input {
-    margin-left: 88px;
+    margin-left: 22px;
 }  
 
 
