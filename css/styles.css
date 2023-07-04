@@ -46,6 +46,35 @@ body {
     padding-top: var(--main-padding);
 }
 
+.resource-container {
+    display: grid;
+    background-color: #3f163f87;
+    grid-template-columns: .5fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 11px;
+    grid-template-areas:
+        "resource-image resource-field"
+        "resource-image resource-field";
+    text-align: center;
+}
+
+.resource-image {
+    grid-area: "resource-image";
+    background-color: blueviolet;
+    height: 200px;
+}
+
+.resource-field {
+    grid-area: "resource-field";
+    background-color: rgb(38, 90, 120);
+    height: 200px;
+}
+
+/* #resource-image-1, #resource-field-1 {
+    display: none;
+} */
+
+
 .form-entry {
     grid-area: form;
     border-radius: var(--main-radius);
@@ -62,19 +91,20 @@ body {
     }
 
     .input:hover {
-       background-color: rgba(137, 43, 226, 0.352);
-       transition: all .25s ease-in-out;
+        background-color: rgba(137, 43, 226, 0.352);
+        transition: all .25s ease-in-out;
     }
 
     input[type="number"] {
         text-align: right;
         margin-right: 10px;
+
         /* Add currency marker */
         &::after {
-          content: "$";
-          margin-left: 5px;
+            content: "$";
+            margin-left: 5px;
         }
-      }
+    }
 
     .label {
         padding-bottom: 111px;
@@ -83,7 +113,7 @@ body {
 
 #image.input {
     margin-left: 22px;
-}  
+}
 
 
 .error-space {
