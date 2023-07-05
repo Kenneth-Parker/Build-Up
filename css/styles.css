@@ -70,9 +70,9 @@ body {
     height: 200px;
 }
 
-/* #resource-image-1, #resource-field-1 {
-    display: none;
-} */
+#resource-1 {
+    /* display: none; */
+}
 
 
 .form-entry {
