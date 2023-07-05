@@ -41,3 +41,63 @@ removeButton3.addEventListener("click", (event) => {
   resourceImage3.remove();
   resourceField3.remove();
 });
+
+// Toggle inStock Resource
+
+// Get the button element
+const inStockButton = document.querySelector(".instock1");
+
+// Create a boolean variable to store the state of the toggle switch
+let isInStock = true;
+
+// Add an event listener to the button
+inStockButton.addEventListener("click", (event) => {
+  // Toggle the state of the toggle switch
+  isInStock = !isInStock;
+
+  // Update the text of the button
+  if (isInStock) {
+    inStockButton.textContent = "In Stock";
+  } else {
+    inStockButton.textContent = "Out of Stock";
+  }
+});
+
+// Get the button element
+const inStockButton2 = document.querySelector(".instock2");
+
+// Create a boolean variable to store the state of the toggle switch
+let isInStock2 = true;
+
+// Add an event listener to the button
+inStockButton2.addEventListener("click", (event) => {
+  // Toggle the state of the toggle switch
+  isInStock2 = !isInStock2;
+
+  // Update the text of the button
+  if (isInStock2) {
+    inStockButton2.textContent = "In Stock";
+  } else {
+    inStockButton2.textContent = "Out of Stock";
+  }
+});
+
+// Get the button element
+const inStockButton3 = document.querySelector(".instock3");
+
+// Create a boolean variable to store the state of the toggle switch
+let isInStock3 = true;
+
+// Add an event listener to the button
+inStockButton3.addEventListener("click", (event) => {
+  // Toggle the state of the toggle switch
+  isInStock3 = !isInStock3;
+
+  // Update the text of the button
+  if (isInStock3) {
+    inStockButton3.textContent = "In Stock";
+  } else {
+    inStockButton3.textContent = "Out of Stock";
+  }
+});
+
