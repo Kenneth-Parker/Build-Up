@@ -40,6 +40,30 @@ body {
     padding-top: var(--main-padding);
 }
 
+.filledForm-container {
+    display: grid;
+    background-color: #3f163f87;
+    grid-template-columns: .5fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 11px;
+    grid-template-areas:
+        "filledForm-image filledForm-field"
+        "filledForm-image filledForm-field";
+    text-align: center;
+}
+
+.filledForm-image {
+    grid-area: "filledForm-image";
+    background-color: rgb(43, 205, 226);
+    height: 200px;
+}
+
+.filledForm-field {
+    grid-area: "filledForm-field";
+    background-color: rgb(38, 90, 120);
+    height: 200px;
+}
+
 .resources {
     grid-area: resource;
     border-radius: var(--main-radius);
@@ -61,7 +85,11 @@ body {
 .resource-image {
     grid-area: "resource-image";
     background-color: blueviolet;
-    height: 200px;
+    /* width: 175px;
+    height: auto; */
+    display: grid;
+    padding: 11px;
+    border:rgb(38, 90, 120) solid 11px;
 }
 
 .resource-field {
