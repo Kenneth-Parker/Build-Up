@@ -89,7 +89,7 @@ body {
     height: auto; */
     display: grid;
     padding: 11px;
-    border:rgb(38, 90, 120) solid 11px;
+    border: rgb(38, 90, 120) solid 11px;
 }
 
 .resource-field {
