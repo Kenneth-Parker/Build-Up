@@ -68,16 +68,16 @@ body {
     grid-area: resource;
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
+    grid-gap: 11px;
 }
 
 .resource-container {
     display: grid;
     background-color: #3f163f87;
     grid-template-columns: .5fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr .01fr;
     grid-gap: 11px;
     grid-template-areas:
-        "resource-image resource-field"
         "resource-image resource-field";
     text-align: center;
 }
@@ -95,13 +95,8 @@ body {
 .resource-field {
     grid-area: "resource-field";
     background-color: rgb(38, 90, 120);
-    height: 200px;
+    /* height: 200px; */
 }
-
-#resource-1 {
-    /* display: none; */
-}
-
 
 .form-entry {
     grid-area: form;
@@ -138,11 +133,6 @@ body {
         padding-bottom: 111px;
     }
 }
-
-#image.input {
-    /* margin-left: 22px; */
-}
-
 
 .error-space {
     grid-area: error;
