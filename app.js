@@ -128,6 +128,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Create and append the resource image
     const resourceImage = document.createElement("div");
     resourceImage.className = "resource-image";
+    resourceImage.id = `"resource-image-${name}"`;
     resourceImage.innerHTML = "resource-image";
     const img = document.createElement("img");
     img.src = image;
@@ -139,6 +140,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Create and append the resource field
     const resourceField = document.createElement("div");
     resourceField.className = "resource-field";
+    resourceField.id = `"resource-field-${name}"`;
     resourceField.innerHTML = "resource-field";
     resourceField.innerHTML += `Item name: ${name}<hr>`;
     resourceField.innerHTML += `Brand: ${brand}<br><br>`;
@@ -153,5 +155,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Clear the form fields
     form.reset();
+
+    // Get the button element 
+    const removeButton = document.getElementById(`remove-${name}`);
+
+    // Add an event listener to the button
+    removeButton.addEventListener("click", (event) => {
+      // Get the resource elements
+      const resourceImage = document.getElementById(`"resource-image-${name}"`);
+      const resourceField = document.getElementById(`"resource-field-${name}"`);
+
+      // Remove the resource elements
+      resourceImage.remove();
+      resourceField.remove();
+    });
+
+
+
   });
 });
