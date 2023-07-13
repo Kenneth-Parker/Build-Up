@@ -145,7 +145,7 @@ document.addEventListener("DOMContentLoaded", () => {
     resourceField.innerHTML += `Item name: ${name}<hr>`;
     resourceField.innerHTML += `Brand: ${brand}<br><br>`;
     resourceField.innerHTML += `Price: ${price}<br><br>`;
-    resourceField.innerHTML += `<button class="${name}">In Stock</button><br><br>`;
+    resourceField.innerHTML += `<button id="id-${name}">${stock}</button><br><br>`;
     resourceField.innerHTML += `<button id="remove-${name}">Remove</button>`;
     resourceContainer.appendChild(resourceField);
 
@@ -155,6 +155,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Clear the form fields
     form.reset();
+
+
+
 
     // Get the button element 
     const removeButton = document.getElementById(`remove-${name}`);
@@ -168,6 +171,29 @@ document.addEventListener("DOMContentLoaded", () => {
       // Remove the resource elements
       resourceImage.remove();
       resourceField.remove();
+    });
+
+
+
+    // Toggle inStock Resource
+
+    // Get the button element
+    const inStockButton = document.getElementById(`id-${name}`);
+
+    // Create a boolean variable to store the state of the toggle switch
+    let isInStock = true;
+
+    // Add an event listener to the button
+    inStockButton.addEventListener("click", (event) => {
+      // Toggle the state of the toggle switch
+      isInStock = !isInStock;
+
+      // Update the text of the button
+      if (isInStock) {
+        inStockButton.textContent = "In Stock";
+      } else {
+        inStockButton.textContent = "Out of Stock";
+      }
     });
 
 
