@@ -41,7 +41,7 @@ body {
 }
 
 .filledForm-container {
-    display: grid;
+    /* display: grid; */
     background-color: #3f163f87;
     grid-template-columns: .5fr 1fr;
     grid-template-rows: 1fr 1fr;

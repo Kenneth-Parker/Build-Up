@@ -101,3 +101,57 @@ inStockButton3.addEventListener("click", (event) => {
   }
 });
 
+document.addEventListener("DOMContentLoaded", () => {
+  // Default page load item removal
+  // ...
+
+  // Toggle inStock Resource
+  // ...
+
+  // Form submission and rendering
+  const form = document.querySelector("form");
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault(); // Prevent default form submission
+
+    // Retrieve form data
+    const brand = document.getElementById("brand").value;
+    const name = document.getElementById("name").value;
+    const price = document.getElementById("price").value;
+    const image = document.getElementById("image").value;
+    const stock = document.getElementById("stock").value;
+
+    // Create a new resource container
+    const resourceContainer = document.createElement("div");
+    resourceContainer.className = "resource-container";
+
+    // Create and append the resource image
+    const resourceImage = document.createElement("div");
+    resourceImage.className = "resource-image";
+    resourceImage.innerHTML = "resource-image";
+    const img = document.createElement("img");
+    img.src = image;
+    img.alt = "Resource Image";
+    img.style.width = "100%";
+    resourceImage.appendChild(img);
+    resourceContainer.appendChild(resourceImage);
+
+    // Create and append the resource field
+    const resourceField = document.createElement("div");
+    resourceField.className = "resource-field";
+    resourceField.innerHTML = "resource-field";
+    resourceField.innerHTML += `Item name: ${name}<hr>`;
+    resourceField.innerHTML += `Brand: ${brand}<br><br>`;
+    resourceField.innerHTML += `Price: ${price}<br><br>`;
+    resourceField.innerHTML += `<button class="${name}">In Stock</button><br><br>`;
+    resourceField.innerHTML += `<button id="remove-${name}">Remove</button>`;
+    resourceContainer.appendChild(resourceField);
+
+    // Append the new resource container to the filledForm-container section
+    const filledFormContainer = document.getElementById("filledForm-container");
+    filledFormContainer.appendChild(resourceContainer);
+
+    // Clear the form fields
+    form.reset();
+  });
+});
