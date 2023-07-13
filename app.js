@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
     resourceImage.id = `"resource-image-${name}"`;
     resourceImage.innerHTML = "resource-image";
     const img = document.createElement("img");
-    img.src = image === '' ? "/Users/kennethparker/module-two/Build-Up/assets/backpackscaps.PNG" : image;
+    img.src = image === '' ? "./assets/backpackscaps.PNG" : image;
     img.alt = "Resource Image";
     img.style.width = "100%";
     resourceImage.appendChild(img);
